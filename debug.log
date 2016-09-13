@@ -1,0 +1,11 @@
+[0830/182136:ERROR:process_info.cc(608)] range at 0xfec63000, size 0x230 fully unreadable
+[0830/182136:ERROR:process_reader_win.cc(142)] SuspendThread: Access is denied. (0x5)
+[0830/182136:ERROR:process_reader_win.cc(233)] ReadMemory at 0x62190000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0830/182136:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\WINDOWS\SYSTEM32\USP10.dll
+[0830/182136:ERROR:process_reader_win.cc(233)] ReadMemory at 0x50df0000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0830/182136:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\Program Files (x86)\Google\Chrome\Application\52.0.2743.116\chrome_child.dll
+[0830/182136:ERROR:process_reader_win.cc(233)] ReadMemory at 0x653a0000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0830/182136:WARNING:pe_image_reader.cc(281)] could not read dos header from C:\WINDOWS\SYSTEM32\dwrite.dll
+[0830/182136:ERROR:exception_snapshot_win.cc(88)] thread ID 0 not found in process
+[0830/182136:WARNING:crash_report_exception_handler.cc(60)] ProcessSnapshotWin::InitializeException failed
+[0830/182136:ERROR:scoped_process_suspend.cc(38)] NtResumeProcess, ntstatus=-1073741558

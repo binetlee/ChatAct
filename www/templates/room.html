@@ -1,0 +1,45 @@
+<ion-view title="{{ room_ctrl.current_room }}" ng-controller="RoomController as room_ctrl">
+ 	<header class="bar bar-header bar-positive">
+ 		<!-- list current room -->
+ 		<h1 class="title">{{ room_ctrl.current_room }}</h1>
+ 		<!-- leave button -->
+ 		<button class="button button-assertive" ng-click="leaveRoom()">Leave</button>
+ 	</header>
+ 	
+  <ion-content class="has-header padding">
+	<!-- check message length to see if we have anything to repeat -->
+	<div class="list" id="messages" ng-if="room_ctrl.messages.length > 0">
+<!-- 		repeat for all messages in array as they are pushed in
+		isnotcurrentuser adds additional class for current item -->
+	    <li class="item item-text-wrap no-border {{ isNotCurrentUser(msg.user) }}" ng-repeat="msg in room_ctrl.messages">
+	    	<div class="msg">	    		
+		    	<div class="details padding">	    		
+					<p> 
+						<!-- show username, text, and timestamp -->
+						<div class="user">{{ msg.user }} says:</div>
+						<div class="message">{{ msg.text }}</div>
+					</p>
+					<small>{{ humanize(msg.time) }}</small>	
+		    	</div>
+	    	</div>
+	    </li>
+	</div>	
+
+	<!-- if message length is 0, no messages displayed and an empty message -->
+	<div class="card" ng-if="!room_ctrl.messages.length">
+	  <div class="item item-text-wrap">
+	    No messages in the room yet.
+	  </div>
+	</div>
+
+  </ion-content>
+
+<!-- send message button with input -->
+<footer class="bar bar-footer bar-positive item-input-inset has-content">
+    <label class="item-input-wrapper">
+      <input type="text" id="message" name="message" ng-model="room_ctrl.message" placeholder="Type message">
+    </label>
+   	<a class="button button-icon icon ion-android-send" ng-click="sendTextMessage()"></a>
+</footer>
+
+</ion-view>
